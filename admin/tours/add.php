@@ -8,13 +8,6 @@
                 <div class="row mb10">
                     Danh mục <br>
                     <select  name="iddm" >
-                        <?php
-                         foreach ($listdanhmuc as $danhmuc) {
-                             extract($danhmuc);
-                           echo  '<option value="'.$id.'">'.$name.'</option>';
-                         }
-                        ?>
-                        
                     </select>
                 </div>
                 <div class="row mb10">
@@ -40,12 +33,6 @@
                     <input type="reset" value="NHẬP LẠI">
                     <a href="index.php?act=listsp"><input type="button" value="DANH SÁCH"></a>
                 </div>
-                <?php
-
-                if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
-
-            
-                ?>
             </form>
         </div>
     </div>

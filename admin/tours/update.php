@@ -1,16 +1,3 @@
-<?php
-
-if (is_array($sanpham)) {
-    extract($sanpham);
-}
-$hinhpath = "../upload/" . $images;
-if (is_file($hinhpath)) {
-    $hinh = "<img src='" . $hinhpath . "' height='80'>";
-} else {
-    $hinh = "no photo";
-}
-
-?>
 
 <div class="boxcenter">
     <div class="row mb header">
@@ -22,14 +9,6 @@ if (is_file($hinhpath)) {
                 <div class="row mb10">
                     <select name="iddm">
                         <option value="0" selected>Tất cả</option>
-                        <?php
-                        foreach ($listdanhmuc as $danhmuc) {
-                            extract($danhmuc);
-                            if ($iddm == $id)  echo  '<option value="' . $id . '" selected>' . $name . '</option>';
-                            else   echo  '<option value="' . $id . '" selected>' . $name . '</option>';
-                        }
-                        ?>
-
                     </select>
                 </div>
                 <div class="row mb10">
@@ -57,11 +36,6 @@ if (is_file($hinhpath)) {
                     <input type="reset" value="NHẬP LẠI">
                     <a href="index.php?act=listsp"><input type="button" value="DANH SÁCH"></a>
                 </div>
-                <?php
-
-                if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
-
-                ?>
             </form>
         </div>
     </div>

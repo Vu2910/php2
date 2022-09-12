@@ -6,13 +6,6 @@
         <input type="text" name="kyw">
         <select name="iddm">
             <option value="0" selected>Tất cả</option>
-            <?php
-            foreach ($listdanhmuc as $danhmuc) {
-                extract($danhmuc);
-                echo  '<option value="' . $id . '">' . $name . '</option>';
-            }
-            ?>
-
         </select>
         <input type="submit" name="listok" value="GO">
     </form>
@@ -33,36 +26,6 @@
                             <th></th>
 
                         </tr>
-                        <?php
-
-                        foreach ($listsanpham as $sanpham) {
-                            extract($sanpham); //lấy đc tên biến gán vào dưới luôn
-                            $suasp = "index.php?act=suasp&id=" . $id;
-                            $xoasp = "index.php?act=xoasp&id=" . $id;
-                            $hinhpath = "../upload/" . $images;
-                            if (is_file($hinhpath)) {
-                                $hinh = "<img src='" . $hinhpath . "' height='80'>";
-                            } else {
-                                $hinh = "no photo";
-                            }
-                            echo '
-                               <tr>
-                                    <td><input type="checkbox" name="" id=""></td>
-                                    <td>' . $id . '</td>
-                                    <td>' . $name . '</td>
-                                    <td>' . $hinh . '</td>
-                                    <td>' . $price . '</td>
-                                    <td>' . $mota . '</td>
-                                    <td><a href="' . $suasp . '"><input type="button" value="Sửa"></a>
-                                        <a href="' . $xoasp . '"><input type="button" value="Xóa"></a>
-                                    </td>
-                               </tr>';
-                        }
-
-
-                        ?>
-
-
                     </table>
                 </div>
                 <br>

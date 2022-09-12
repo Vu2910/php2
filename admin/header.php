@@ -18,7 +18,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="index.php?act=adddm">Danh mục</a></li>
-                <li><a href="index.php?act=addsp">Tour</a></li>
+                <li><a href="tours/add.php">Tour</a></li>
                 
             </ul>
         </div>
