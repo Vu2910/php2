@@ -7,8 +7,8 @@
         <select name="iddm">
             <option value="0" selected>Tất cả</option>
             <?php
-            foreach ($listcategories as $categories) {
-                extract($categories);
+            foreach ($listdanhmuc as $danhmuc) {
+                extract($danhmuc);
                 echo  '<option value="' . $id . '">' . $name . '</option>';
             }
             ?>
@@ -35,8 +35,8 @@
                         </tr>
                         <?php
 
-                        foreach ($listtours as $tours) {
-                            extract($tours); //lấy đc tên biến gán vào dưới luôn
+                        foreach ($listsanpham as $sanpham) {
+                            extract($sanpham); //lấy đc tên biến gán vào dưới luôn
                             $suasp = "index.php?act=suasp&id=" . $id;
                             $xoasp = "index.php?act=xoasp&id=" . $id;
                             $hinhpath = "../upload/" . $images;
@@ -67,6 +67,9 @@
                 </div>
                 <br>
                 <div class="row mbbt">
+                    <input type="button" value="Chọn tất cả" id="">
+                    <input type="button" value="Bỏ chọn tất cả" id="">
+                    <input type="button" value="Xóa các mục đã chọn" id="">
                     <a href="index.php?act=addsp"><input type="button" value="Nhập thêm" id=""></a>
                 </div>
             </form>

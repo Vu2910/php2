@@ -1,9 +1,9 @@
 <?php
 
-if (is_array($tours)) {
-    extract($tours);
+if (is_array($sanpham)) {
+    extract($sanpham);
 }
-$hinhpath = "../upload/" . $image;
+$hinhpath = "../upload/" . $images;
 if (is_file($hinhpath)) {
     $hinh = "<img src='" . $hinhpath . "' height='80'>";
 } else {
@@ -23,8 +23,8 @@ if (is_file($hinhpath)) {
                     <select name="iddm">
                         <option value="0" selected>Tất cả</option>
                         <?php
-                        foreach ($listcategories as $categories) {
-                            extract($categories);
+                        foreach ($listdanhmuc as $danhmuc) {
+                            extract($danhmuc);
                             if ($iddm == $id)  echo  '<option value="' . $id . '" selected>' . $name . '</option>';
                             else   echo  '<option value="' . $id . '" selected>' . $name . '</option>';
                         }

@@ -9,8 +9,8 @@
                     Danh mục <br>
                     <select  name="iddm" >
                         <?php
-                         foreach ($listcategories as $categories) {
-                             extract($categories);
+                         foreach ($listdanhmuc as $danhmuc) {
+                             extract($danhmuc);
                            echo  '<option value="'.$id.'">'.$name.'</option>';
                          }
                         ?>
@@ -18,11 +18,11 @@
                     </select>
                 </div>
                 <div class="row mb10">
-                    Tours <br>
-                    <input type="text" name="tenkh">
+                    Tên sản phẩm <br>
+                    <input type="text" name="tensp">
                 </div>
                 <div class="row mb10">
-                    Giá<br>
+                    giá<br>
                     <input type="text" name="giasp">
                 </div>
                 <div class="row mb10">
